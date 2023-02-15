@@ -8,18 +8,21 @@ class App extends Component {
     neutral: 0,
     bad: 0,
   };
+
   render() {
+    const { good, neutral, bad } = this.state;
+
     return (
       <Container>
         <div>
-          <h2>Please leave feedback</h2>
+          <h3>Please leave feedback</h3>
           <button>Good</button>
           <button>Neutral</button>
           <button>Bad</button>
           <h3>Statistics</h3>
-          <p>Good:</p>
-          <p>Neutral:</p>
-          <p>Bad:</p>
+          <p>Good: {good} </p>
+          <p>Neutral: {neutral}</p>
+          <p>Bad: {bad}</p>
         </div>
       </Container>
     );
