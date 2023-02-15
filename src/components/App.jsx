@@ -9,6 +9,14 @@ class App extends Component {
     bad: 0,
   };
 
+  handleIncrement = e => {
+    this.setState(prevState => {
+      return {
+        good: prevState + 1,
+      };
+    });
+  };
+
   render() {
     const { good, neutral, bad } = this.state;
 
@@ -16,9 +24,15 @@ class App extends Component {
       <Container>
         <div>
           <h3>Please leave feedback</h3>
-          <button>Good</button>
-          <button>Neutral</button>
-          <button>Bad</button>
+          <button type="button" onClick={this.handleIncrement}>
+            Good
+          </button>
+          <button type="button" onClick={this.handleIncrement}>
+            Neutral
+          </button>
+          <button type="button" onClick={this.handleIncrement}>
+            Bad
+          </button>
           <h3>Statistics</h3>
           <p>Good: {good} </p>
           <p>Neutral: {neutral}</p>
