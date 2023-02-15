@@ -1,16 +1,29 @@
-export const App = () => {
-  return (
-    <div
-      style={{
-        height: '100vh',
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        fontSize: 40,
-        color: '#010101',
-      }}
-    >
-      <h1>React homework template</h1>
-    </div>
-  );
-};
+import React, { Component } from 'react';
+
+import { Container } from 'components/App.styled';
+
+class App extends Component {
+  state = {
+    good: 0,
+    neutral: 0,
+    bad: 0,
+  };
+  render() {
+    return (
+      <Container>
+        <div>
+          <h2>Please leave feedback</h2>
+          <button>Good</button>
+          <button>Neutral</button>
+          <button>Bad</button>
+          <h3>Statistics</h3>
+          <p>Good:</p>
+          <p>Neutral:</p>
+          <p>Bad:</p>
+        </div>
+      </Container>
+    );
+  }
+}
+
+export default App;
