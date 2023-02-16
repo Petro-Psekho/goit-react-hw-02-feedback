@@ -4,7 +4,9 @@ export const Container = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 40px;
-  height: 100vh;
+
+  margin-top: 40px;
+  font-size: 30px;
+
   color: #304350;
 `;
