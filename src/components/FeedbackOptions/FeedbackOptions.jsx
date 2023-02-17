@@ -12,7 +12,6 @@ export const FeedbackOptions = ({ options, onLeaveFeedback }) => {
           <FeedbackButtonListItem
             key={option}
             type="button"
-            // className={css.btn}
             onClick={() => onLeaveFeedback(option)}
           >
             {option}
